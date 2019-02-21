@@ -15,6 +15,7 @@ class CoinListener(val port: Port) : SensorListener {
     val sensorMode = lightSensor.ambientMode
 
     override fun readInput() {
+
         val samples = FloatArray(sensorMode.sampleSize())
         sensorMode.fetchSample(samples, 0)
 
