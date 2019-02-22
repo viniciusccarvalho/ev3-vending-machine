@@ -55,6 +55,16 @@ class CandyDispenser {
             }
 
         })
+        Button.ESCAPE.addKeyListener(object: KeyListener{
+            override fun keyPressed(p0: Key?) {
+            }
+
+            override fun keyReleased(p0: Key?) {
+                stop()
+                System.exit(0)
+            }
+
+        })
         displayManager.printWelcome()
     }
 
